@@ -1,21 +1,31 @@
+import java.util.ArrayList;
+
 public class Pessoa {
     String nome;
     Data nasc;
-    Contato contato[]= new Contato[4];
-    int numContatos = 0 ;
+    ArrayList<Contato>contatos;
+
+
+
+    public Pessoa(){
+        this.contatos = new ArrayList<Contato>();
+    }
     void cadastrarContato(String num, boolean isW, boolean isT)
     {
-        this.contato[numContatos].num =num;
-        this.contato[numContatos].isTel = isT;
-        this.contato[numContatos].isWhat = isW;
-        numContatos++;
+        Contato t = new Contato(num, isW, isT);
+        this.contatos.add(t);
+        this.contatos
+
+                                                        
+
 
 
 
     }
     void listarContatos(){
-        for(int i =0; i < numContatos; i++){
-            contato[1].imprimeContato();
+        for(int i =0; i < this.contatos.size(); i++){
+            contatos.get(i).imprimeContato();
+
             System.out.println();
         }
     }
