@@ -14,7 +14,6 @@ public class Pessoa {
     {
         Contato t = new Contato(num, isW, isT);
         this.contatos.add(t);
-        this.contatos
 
                                                         
 
